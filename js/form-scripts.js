@@ -28,7 +28,7 @@ $(document).ready(function(){
                     //alert(data);
                     if(data == 'No')
                     {
-                        alert("Wrong Data");
+                        alert("Wrong Login or Password");
                     }
                     else
                     {
@@ -54,6 +54,38 @@ $(document).ready(function(){
                 location.reload();
             }
         });
+    });
+    $('#add_recipe_button').click(function(){
+
+        var action = "add_recipe";
+        var name = $('#name').val();
+        var icon = $('#icon').val();
+        var image = $('#image').val();
+        var cost = $('#cost').val();
+        if(name != '' && image != '' )
+        {
+            $.ajax({
+                url:"php/add.php",
+                method:"POST",
+                data: {name:name, icon:icon, image:image, cost:cost},
+                success:function(data)
+                {
+                    //alert(data);
+                    if(data == 'No')
+                    {
+                        alert("something went wrong");
+                    }
+                    else
+                    {
+                        location.reload();
+                    }
+                }
+            });
+        }
+        else
+        {
+            alert("Empty fields found!!!");
+        }
     });
 });
 

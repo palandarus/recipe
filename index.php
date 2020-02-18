@@ -94,10 +94,22 @@ session_start();
                 if (isset($_SESSION['username'])) {
                     ?>
                     <li class="nav-item navbar-brand waves-effect">
-                        <strong class blue-text><?php echo $_SESSION['username']; ?></strong>
+                        <strong class blue-text><?php
+                            echo $_SESSION['username'];
+                            ?>
+                        </strong>
                     </li>
                     <button id="logout_button" type="button" class="btn btn-danger">Logout</button>
-
+                    <?php
+                    if ($_SESSION['role'] > 10) {
+                        ?>
+                        <button id="modal_addrecipeActivate" type="button"
+                                class="btn btn-outline-secondary waves-effect px-3" data-toggle="modal"
+                                data-target="#ModalRecipeAddForm"><i class="fas fa-folder-plus"
+                                                                     aria-hidden="true"></i></button>
+                        <?php
+                    }
+                    ?>
 
                     <?php
                 } else {
@@ -146,6 +158,71 @@ session_start();
                                 <div class="modal-footer d-flex justify-content-left">
                                     <button type="button" name="login_button" id="login_button" class="btn btn-warning">
                                         Login
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal fade shake" id="ModalRecipeAddForm" tabindex="-1" role="form"
+                 aria-labelledby="ModalRecipeAddFormLabel" aria-hidden="true">
+                <form role="dialog" id="addRecipeForm" data-toggle="validator" class="shake">
+
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="ModalRecipeAddFormLabel">Adding recipe</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Recipe name</label>
+                                    <input type="text" class="form-control" name="name" id="name"
+                                           placeholder="Enter name of recipe"
+                                           required>
+                                    <div class="help-block with-errors"></div>
+                                    <br/>
+                                    <label>Icon</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                                   aria-describedby="inputGroupFileAddon01">
+                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <label>Image</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile02"
+                                                   aria-describedby="inputGroupFileAddon02">
+                                            <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <label>Cost</label>
+                                    <input type="number" name="cost" id="cost" class="form-control"
+                                           placeholder="Enter Cost"
+                                           required/>
+                                    <div class="help-block with-errors"></div>
+                                    <br/>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-left">
+                                    <button type="button" name="add_recipe_button" id="add_recipe_button"
+                                            class="btn btn-warning">
+                                        Add recipe
                                     </button>
                                 </div>
                             </div>
@@ -307,6 +384,7 @@ background-repeat: no-repeat; background-size: cover;">
 </div>
 -->
 
+<!--
 
 <main>
     <div class="container">
@@ -332,7 +410,7 @@ background-repeat: no-repeat; background-size: cover;">
                         <a href="#" class="nav-link">Десерты</a>
                     </li>
                 </ul>
-                <!-- Search
+               Search
 
                 <form class="form-inline">
                     <div class="md-form my-0">
@@ -340,11 +418,11 @@ background-repeat: no-repeat; background-size: cover;">
                     </div>
                 </form>
 
-                -->
+
             </div>
         </nav>
         <section class="text-center mb-4">
-            <!-- Добавляем строки -->
+
             <div class="row wow fadeIn">
 
                 <div class="col-lg-3 col-md-6 mb-4">
@@ -836,29 +914,7 @@ background-repeat: no-repeat; background-size: cover;">
     </div>
 </main>
 
-<form role="form" id="contactForm" data-toggle="validator" class="shake">
-    <div class="row">
-        <div class="form-group col-sm-6">
-            <label for="name" class="h4">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter name" required
-                   data-error="NEW ERROR MESSAGE">
-            <div class="help-block with-errors"></div>
-        </div>
-        <div class="form-group col-sm-6">
-            <label for="email" class="h4">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
-            <div class="help-block with-errors"></div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="message" class="h4 ">Message</label>
-        <textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
-        <div class="help-block with-errors"></div>
-    </div>
-    <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
-    <div id="msgSubmit" class="h3 text-center hidden"></div>
-    <div class="clearfix"></div>
-</form>
+-->
 
 
 </body>
