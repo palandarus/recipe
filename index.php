@@ -170,7 +170,6 @@ session_start();
             <div class="modal fade shake" id="ModalRecipeAddForm" tabindex="-1" role="form"
                  aria-labelledby="ModalRecipeAddFormLabel" aria-hidden="true">
                 <form role="dialog" id="addRecipeForm" data-toggle="validator" class="shake">
-
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -179,7 +178,6 @@ session_start();
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label>Recipe name</label>
@@ -237,13 +235,13 @@ session_start();
 
 
             <ul class="navbar-nav nav-flex-icons">
-                <li class="nav-item">
-                    <a href="#" class="nav-link waves-effect">
-                        <span class="badge red z-depth-1 mr-1">13</span>
-                        <i class="fa fa-shopping-cart"></i>
-                        <span class="clearfix d-none d-sm-inline-block">Cart</span>
-                    </a>
-                </li>
+<!--                <li class="nav-item">-->
+<!--                    <a href="#" class="nav-link waves-effect">-->
+<!--                        <span class="badge red z-depth-1 mr-1">13</span>-->
+<!--                        <i class="fa fa-shopping-cart"></i>-->
+<!--                        <span class="clearfix d-none d-sm-inline-block">Cart</span>-->
+<!--                    </a>-->
+<!--                </li>-->
                 <li class="nav-item">
                     <a href="#" class="nav-link waves-effect">
                         <i class="fab fa-facebook"></i>
@@ -263,658 +261,538 @@ session_start();
     </div>
     </div>
 </nav>
-
-<!-- Слайдер
-<div id="carousel-ex" class="carousel slide carousel-fade pt4" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li class="active" data-target="#carosel-ex" data-slide-to="0"></li>
-        <li data-target="#carousel-ex" data-slide-to="1"></li>
-        <li data-target="#carousel-ex" data-slide-to="2"></li>
-        <li data-target="#carousel-ex" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="" listbox>
-
-        <div class="carousel-item active">
-            <div class="view" style="background-image: url('https://images.pexels.com/photos/2284166/pexels-photo-2284166.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');
-background-repeat: no-repeat; background-size: cover;">
-                <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
-                    <div class="text-center white-text mx-5 wow fadeIn">
-                        <h1 class="mb4">
-                            <strong>Recipes here h1</strong>
-                        </h1>
-                        <p>
-                            <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, quae.</strong>
-                        </p>
-
-                        <p class="mb-4 d-none d-mdblock">
-                            <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, asperiores
-                                debitis dignissimos eius excepturi laboriosam libero praesentium ratione rerum
-                                sunt!</strong>
-                        </p>
-                        <a href="" class="btn btn-outline-white btn-lg">
-                            Lorem ipsum dolor. <i class="fa fa-graduation-cap ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="view" style="background-image: url('https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');
-background-repeat: no-repeat; background-size: cover;">
-                <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
-                    <div class="text-center white-text mx-5 wow fadeIn">
-                        <h1 class="mb4">
-                            <strong>Recipes here h1</strong>
-                        </h1>
-                        <p>
-                            <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, quae.</strong>
-                        </p>
-
-                        <p class="mb-4 d-none d-mdblock">
-                            <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, asperiores
-                                debitis dignissimos eius excepturi laboriosam libero praesentium ratione rerum
-                                sunt!</strong>
-                        </p>
-                        <a href="" class="btn btn-outline-white btn-lg">
-                            Lorem ipsum dolor. <i class="fa fa-graduation-cap ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="view" style="background-image: url('https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');
-background-repeat: no-repeat; background-size: cover;">
-                <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
-                    <div class="text-center white-text mx-5 wow fadeIn">
-                        <h1 class="mb4">
-                            <strong>Recipes here h1</strong>
-                        </h1>
-                        <p>
-                            <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, quae.</strong>
-                        </p>
-
-                        <p class="mb-4 d-none d-mdblock">
-                            <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, asperiores
-                                debitis dignissimos eius excepturi laboriosam libero praesentium ratione rerum
-                                sunt!</strong>
-                        </p>
-                        <a href="" class="btn btn-outline-white btn-lg">
-                            Lorem ipsum dolor. <i class="fa fa-graduation-cap ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="view" style="background-image: url('https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');
-background-repeat: no-repeat; background-size: cover;">
-                <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
-                    <div class="text-center white-text mx-5 wow fadeIn">
-                        <h1 class="mb4">
-                            <strong>Recipes here h1</strong>
-                        </h1>
-                        <p>
-                            <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, quae.</strong>
-                        </p>
-
-                        <p class="mb-4 d-none d-mdblock">
-                            <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, asperiores
-                                debitis dignissimos eius excepturi laboriosam libero praesentium ratione rerum
-                                sunt!</strong>
-                        </p>
-                        <a href="" class="btn btn-outline-white btn-lg">
-                            Lorem ipsum dolor. <i class="fa fa-graduation-cap ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <a href="#carousel-ex" class="carousel-control-prev"
-       role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </a>
-    <a href="#carousel-ex" class="carousel-control-next"
-       role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </a>
-</div>
--->
-
-<!--
-
 <main>
+
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
-            <span class="navbar-brand">Categories:</span>
-            <button class="navbar-toggler" type="button"
-                    data-toggle="collapse" data-target="#nextNav"
-                    aria-controls="nextNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="nextNav">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link">All</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Первые блюда</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Вторые блюда</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Десерты</a>
-                    </li>
-                </ul>
-               Search
+        <!--
+           <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
+               <span class="navbar-brand">Categories:</span>
+               <button class="navbar-toggler" type="button"
+                       data-toggle="collapse" data-target="#nextNav"
+                       aria-controls="nextNav" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="nextNav">
+                   <ul class="navbar-nav mr-auto">
+                       <li class="nav-item active">
+                           <a href="#" class="nav-link">All</a>
+                       </li>
+                       <li class="nav-item">
+                           <a href="#" class="nav-link">Первые блюда</a>
+                       </li>
+                       <li class="nav-item">
+                           <a href="#" class="nav-link">Вторые блюда</a>
+                       </li>
+                       <li class="nav-item">
+                           <a href="#" class="nav-link">Десерты</a>
+                       </li>
+                   </ul>
+                  Search
 
-                <form class="form-inline">
-                    <div class="md-form my-0">
-                        <input type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
-                    </div>
-                </form>
+                   <form class="form-inline">
+                       <div class="md-form my-0">
+                           <input type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+                       </div>
+                   </form>
 
 
-            </div>
-        </nav>
-        <section class="text-center mb-4">
+               </div>
+           </nav>
+           -->
+            <!--
+           <section class="text-center mb-4">
 
-            <div class="row wow fadeIn">
+               <div class="row wow fadeIn">
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
+               </div>
 
-            </div>
+               <div class="row wow fadeIn">
 
-            <div class="row wow fadeIn">
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
+               </div>
 
-            </div>
+               <div class="row wow fadeIn">
 
-            <div class="row wow fadeIn">
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
+               </div>
 
-            </div>
+               <div class="row wow fadeIn">
 
-            <div class="row wow fadeIn">
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="card">
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
+                           <div class="view overlay">
+                               <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
+                                    alt="Recipe1">
+                               <a href="">
+                                   <div class="mask rgba-white-slight"></div>
+                               </a>
+                           </div>
+                           <div class="card-body text-center">
+                               <a href="" class="grey-text">
+                                   <h5>Первое блюдо</h5>
+                               </a>
+                               <h5>
+                                   <strong>
+                                       <a href="#" class="dark-grey-text">Название рецепта<span
+                                                   class="badge badge-pill danger-color">New</span></a>
+                                   </strong>
+                               </h5>
+                               <h4 class="font-weight-bold blue-text">
+                                   <strong>200$</strong>
+                               </h4>
+                           </div>
+                       </div>
+                   </div>
 
-                        <div class="view overlay">
-                            <img class="card-img-top"
-                                 src="https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&h=150&w=350"
-                                 alt="Recipe1">
-                            <a href="">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="" class="grey-text">
-                                <h5>Первое блюдо</h5>
-                            </a>
-                            <h5>
-                                <strong>
-                                    <a href="#" class="dark-grey-text">Название рецепта<span
-                                                class="badge badge-pill danger-color">New</span></a>
-                                </strong>
-                            </h5>
-                            <h4 class="font-weight-bold blue-text">
-                                <strong>200$</strong>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <nav class="d-flex justify-content-center wow fadeIn">
-            <ul class="pagination pg-blue">
-                <li class="page-item disabled">
-                    <a href="" class="page-link" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item active">
-                    <a href="" class="page-link" aria-label="Next">
-                        <span aria-hidden="true">1</span>
-                    </a>
-                </li>
-                <li class="page-item ">
-                    <a href="" class="page-link" aria-label="Previous">
-                        <span aria-hidden="true">2</span>
-                    </a>
-                </li>
-                <li class="page-item ">
-                    <a href="" class="page-link" aria-label="Previous">
-                        <span aria-hidden="true">3</span>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" class="page-link" aria-label="Previous">
-                        <span aria-hidden="true">4</span>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="" class="page-link" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+               </div>
+           </section>
+             -->
+            <div class="goods-out"></div>
+          <!-- <nav class="d-flex justify-content-center wow fadeIn">
+               <ul class="pagination pg-blue">
+                   <li class="page-item disabled">
+                       <a href="" class="page-link" aria-label="Previous">
+                           <span aria-hidden="true">&laquo;</span>
+                       </a>
+                   </li>
+                   <li class="page-item active">
+                       <a href="" class="page-link" aria-label="Next">
+                           <span aria-hidden="true">1</span>
+                       </a>
+                   </li>
+                   <li class="page-item ">
+                       <a href="" class="page-link" aria-label="Previous">
+                           <span aria-hidden="true">2</span>
+                       </a>
+                   </li>
+                   <li class="page-item ">
+                       <a href="" class="page-link" aria-label="Previous">
+                           <span aria-hidden="true">3</span>
+                       </a>
+                   </li>
+                   <li class="page-item">
+                       <a href="" class="page-link" aria-label="Previous">
+                           <span aria-hidden="true">4</span>
+                       </a>
+                   </li>
+                   <li class="page-item">
+                       <a href="" class="page-link" aria-label="Next">
+                           <span aria-hidden="true">&raquo;</span>
+                       </a>
+                   </li>
+               </ul>
+           </nav> -->
 
     </div>
-</main>
 
--->
+</main>
 
 
 </body>
