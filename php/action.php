@@ -1,7 +1,7 @@
 <?php
 require_once 'dbconnect.php';
-$action=$_POST["action"];
-switch ($action){
+$action = $_POST["action"];
+switch ($action) {
     case 'init':
         init($connect);
         break;
@@ -33,16 +33,17 @@ if (isset($_POST["action"])) {
     }
     unset($_SESSION["username"]);
 }
-function init($connect){
-    $sqlquery="SELECT * FROM recipe";
-    $result=mysqli_query($connect,$sqlquery);
-    if(mysqli_num_rows($result)>0){
-        $out=array();
-        while($row=mysqli_fetch_assoc($result)){
-            $out[$row["id"]]=$row;
+function init($connect)
+{
+    $sqlquery = "SELECT * FROM `recipe` LEFT JOIN category ON recipe.category_id=category.id_category ORDER BY category.category_name, recipe.recipe_name";
+    $result = mysqli_query($connect, $sqlquery);
+    if (mysqli_num_rows($result) > 0) {
+        $out = array();
+        while ($row = mysqli_fetch_assoc($result)) {
+            $out[$row["id"]] = $row;
         }
         echo json_encode($out);
-    }
-    else echo "0 results";
+    } else echo "0 results";
 }
+
 ?>

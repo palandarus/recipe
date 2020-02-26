@@ -13,6 +13,9 @@ session_start();
 <script type="text/javascript" src="js/validator.min.js"></script>
 <!-- Your custom scripts (optional) -->
 <script type="text/javascript" src="js/form-scripts.js"></script>
+<!-- Your custom scripts (optional) -->
+<script type="text/javascript" src="js/lightbox.js"></script>
+<link href="css/lightbox.css" rel="stylesheet" />
 
 <html lang="en">
 <head>
@@ -263,7 +266,7 @@ session_start();
 </nav>
 <main>
 
-    <div class="container">
+    <div class="container-fluid">
         <!--
            <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
                <span class="navbar-brand">Categories:</span>
