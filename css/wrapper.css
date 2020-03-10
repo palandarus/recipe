@@ -1,0 +1,54 @@
+.crossRotate {
+    -webkit-transition-duration: 2s;
+    -moz-transition-duration: 2s;
+    -o-transition-duration: 2s;
+    transition-duration: 2s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+}
+.crossRotate:hover {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.wrapper {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    left: 0;
+    top: 0;
+    background-color: #d5d5d5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-wrap {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    perspective: 500px;
+    border: 1px solid #fff;
+
+
+
+}
+.front, .back {
+
+    display: flex;
+    transition: 1s;
+}
+.front img {
+    width: auto;
+    height: auto;
+}
+.back img {
+    width: auto;
+    height: auto;
+    transform: rotateY(180deg);
+}
+.card-wrap:hover .front {
+    transform: rotateY(180deg);}
+.card-wrap:hover .back {
+    transform: rotateY(360deg);}

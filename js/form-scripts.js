@@ -5,13 +5,13 @@ function init() {
         show_recipes
     );
 }
-
 function show_recipes(data) {
     var goods = JSON.parse(data);
     console.log(goods);
     var category = 0;
     var flag = 0;
-    var out = ' <section class="text-center mb-2"> ';
+    var itemCount = 0;
+    var out = ' <section class="text-center mb-auto"> ';
     // out += '<div class="row wow fadeIn">';
     for (var key in goods) {
         if (goods[key].category_id != category) {
@@ -21,28 +21,31 @@ function show_recipes(data) {
                 out += '</div>';
                 flag = 1;
             }
-            out += '<div><h1><span class="badge badge-primary">' + goods[key].category_name + '</span></h1>';
+            out += '<div>';
+            out += '<div class="row wow fadeIn">';
+            out += '<div class="col-1 align-self-center"><h1 class="align-text-bottom"><span class="badge badge-primary">' + ' S<br /> <br />O<br /> <br />U<br /> <br />P<br /> <br />S' + '</span></div>';
+            out += '<div class="col-11">';
+            // out += '<div><h1><span class="badge badge-primary">' + goods[key].category_name + '</span></h1>';
             out += '<div class="row wow fadeIn">';
         }
+        if (itemCount > 10) {
+            out += '</div>';
+            out += '<div class="row wow fadeIn">';
+            itemCount = 0;
+        }
+        itemCount++;
         out += '<div class="col-4 col-md-3 col-lg-2 col-xl-1 mb-3">';
-        // out += '<div class="card">';
         out += '<div class="view overlay">';
         out += '<a href="img/recipes/' + goods[key].image + '" data-lightbox="' + goods[key].recipe_name + '">';
-        out += '<img class="card-img-top img-fluid" src="img/recipe_icons/' + goods[key].icon + '"alt="' + goods[key].name + '">';
+        // out += '<img class="card-img-top crossRotate" src="img/recipe_icons/' + goods[key].icon + '"alt="' + goods[key].name + '">';
+        out += '<img class="card-img-top img-fluid " src="img/recipe_icons/' + goods[key].icon + '"alt="' + goods[key].name + '">';
         out += '<div class="mask rgba-white-slight"></div>';
         out += '</a>';
-        // out += '<a href="">';
-        // out += '<div class="mask rgba-white-slight"></div>';
-        // out += '</a>';
         out += '</div>';
-        // out += '<div class="card-body text-center">';
-        // out += '<h4 class="font-weight-bold blue-text">';
-        // out += '<strong>' + goods[key].cost + '$</strong>';
-        // out += '</h4>';
-        // out += '</div>';
-        // out += '</div>';
         out += '</div>';
     }
+    out += '</div>';
+    out += '</div>';
     out += '</div>';
     out += '</div>';
     $('.goods-out').html(out);
