@@ -7,7 +7,7 @@ session_start();
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="js/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <script type="text/javascript" src="js/validator.min.js"></script>
@@ -15,7 +15,7 @@ session_start();
 <script type="text/javascript" src="js/form-scripts.js"></script>
 <!-- Your custom scripts (optional) -->
 <script type="text/javascript" src="js/lightbox.js"></script>
-<link href="css/lightbox.css" rel="stylesheet" />
+<link href="css/lightbox.css" rel="stylesheet"/>
 
 <html lang="en">
 <head>
@@ -31,7 +31,7 @@ session_start();
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="css/mdb.min.css">
     <!-- Your custom styles (optional) -->
@@ -67,6 +67,33 @@ session_start();
     </style>
 </head>
 <body>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Changing Costs</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-4">
+                    <div class="costToChange" id="costToChange"></div>
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-default">Change</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ========================================================================================== -->
 
 <nav class="navbar fixed top navbar-expand-lg navbar-light white scrolling-navbar">
     <div class="container">
@@ -244,11 +271,14 @@ session_start();
             </ul>
     </div>
     </div>
+
+
 </nav>
 <main>
 
     <div class="container-fluid">
-            <div class="goods-out"></div>
+
+        <div class="goods-out"></div>
 
     </div>
 

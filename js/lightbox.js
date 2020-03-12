@@ -76,7 +76,6 @@
     var self = this;
     // Both enable and build methods require the body tag to be in the DOM.
     $(document).ready(function() {
-      $(event.target).addClass("animated zoomIn");
       self.enable();
       self.build();
     });
@@ -121,7 +120,6 @@
     this.$container      = this.$lightbox.find('.lb-container');
     this.$image          = this.$lightbox.find('.lb-image');
     this.$nav            = this.$lightbox.find('.lb-nav');
-    this.event.target;
 
     // Store css values for future lookup
     this.containerPadding = {
@@ -211,7 +209,6 @@
   Lightbox.prototype.start = function($link) {
     var self    = this;
     var $window = $(window);
-    $link.
 
     $window.on('resize', $.proxy(this.sizeOverlay, this));
 
