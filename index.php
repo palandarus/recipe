@@ -1,5 +1,9 @@
 <?php
 session_start();
+//if (isset($_SESSION['username'])){
+//    setcookie("cookieUsername", $_SESSION['username'], time()+3600);
+//    setcookie("cookieRole", $_SESSION['role'], time()+3600);
+//}
 ?>
 <!DOCTYPE html>
 <!-- jQuery -->
@@ -80,12 +84,13 @@ session_start();
             </div>
             <div class="modal-body mx-3">
                 <div class="md-form mb-4">
+                    <div class="idRecipe" id="idRecipe"></div>
                     <div class="costToChange" id="costToChange"></div>
                 </div>
 
             </div>
             <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-default">Change</button>
+                <button id="chCost_button" class="btn btn-default">Change</button>
             </div>
         </div>
     </div>
@@ -109,17 +114,17 @@ session_start();
             <ul class="navbar-nav mr-auto">
 
                 <?php
-                if (isset($_SESSION['username'])) {
+                if (isset($_COOKIE["cookieUsername"])) {
                     ?>
                     <li class="nav-item navbar-brand waves-effect">
                         <strong class blue-text><?php
-                            echo $_SESSION['username'];
+                            echo $_COOKIE["cookieUsername"];
                             ?>
                         </strong>
                     </li>
                     <button id="logout_button" type="button" class="btn btn-danger">Logout</button>
                     <?php
-                    if ($_SESSION['role'] > 10) {
+                    if ($_COOKIE['cookieRole'] > 10) {
                         ?>
                         <button id="modal_addrecipeActivate" type="button"
                                 class="btn btn-outline-secondary waves-effect px-3" data-toggle="modal"

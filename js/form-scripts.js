@@ -9,7 +9,7 @@ function init() {
 function show_recipes(data) {
     var goods = JSON.parse(data);
     console.log(goods);
-    var role=10;
+    var role=getCookie('cookieRole');
     var category = 0;
     var flag = 0;
     var itemCount = 0;
@@ -90,7 +90,9 @@ else
 
 function open_recipe(id,cost) {
 
-    var out='<input type="text" name="cost" id="cost" value="'+ cost +'">';
+    var outid='<input type="text" name="id_currentrecipe" id="id_currentrecipe" hidden="true" value="'+ id +'">';
+    var out='<input type="text" name="newcost" id="newcost" value="'+ cost +'">';
+    $('.idRecipe').html(outid);
     $('.costToChange').html(out);
     $("#myModal1").modal('show');
 
@@ -144,6 +146,67 @@ function submitMSG(valid, msg) {
     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 }
 
+function deleteCookie(name) {
+    setCookie(name, "", {
+        'max-age': -1
+    })
+}
+
+function setCookie(name, value, options = {}) {
+
+    options = {
+        path: '/',
+        // при необходимости добавьте другие значения по умолчанию
+        ...options
+    };
+
+    if (options.expires instanceof Date) {
+        options.expires = options.expires.toUTCString();
+    }
+
+    let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+    for (let optionKey in options) {
+        updatedCookie += "; " + optionKey;
+        let optionValue = options[optionKey];
+        if (optionValue !== true) {
+            updatedCookie += "=" + optionValue;
+        }
+    }
+
+    document.cookie = updatedCookie;
+}
+
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : -1;
+}
+
+function logined(data) {
+    // alert(data);
+    // var userInfo = JSON.parse(data);
+    if (data == 'No') {
+        alert("Wrong Login or Password");
+    } else {
+        var userInfo = JSON.parse(data);
+        setCookie('cookieUsername',userInfo[0]);
+        setCookie('cookieRole',userInfo[1]);
+        $('#loginModal').hide();
+        location.reload();
+    }
+}
+
+function chCost(data){
+    if (data == 'No') {
+        alert("Something going wrong");
+    } else {
+        $('#ModalRecipeAddForm').hide();
+        location.reload();
+    }
+}
+
 $("#loginForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
@@ -164,27 +227,31 @@ $(document).ready(function () {
     $('#login_button').click(function () {
         var username = $('#username').val();
         var password = $('#password').val();
-        if (username != '' && password != '') {
-            $.ajax({
-                url: "php/action.php",
-                method: "POST",
-                data: {username: username, password: password},
-                success: function (data) {
-                    //alert(data);
-                    if (data == 'No') {
-                        alert("Wrong Login or Password");
-                    } else {
-                        $('#loginModal').hide();
-                        location.reload();
-                    }
-                }
-            });
-        } else {
-            alert("Both Fields are required");
-        }
+
+        $.post("php/action.php", {
+                "action": "login",
+                'username': username,
+                'password': password
+            },
+            logined
+        );
+
+        // if (username != '' && password != '') {
+        //     $.ajax({
+        //         url: "php/action.php",
+        //         method: "POST",
+        //         data: {username: username, password: password},
+        //         logined});
+        //     // location.reload();
+        // } else {
+        //     alert("Both Fields are required");
+        // }
     });
     $('#logout_button').click(function () {
         var action = "logout";
+        deleteCookie('cookieUsername');
+        deleteCookie('cookieRole');
+        // location.reload();
         $.ajax({
             url: "php/action.php",
             method: "POST",
@@ -193,6 +260,7 @@ $(document).ready(function () {
                 location.reload();
             }
         });
+
     });
     $('#add_recipe_button').click(function () {
 
@@ -222,10 +290,21 @@ $(document).ready(function () {
             alert("Empty fields found!!!");
         }
     });
-    $('.inputGroupFile01').file_upload();
+    // $('.inputGroupFile01').file_upload();
     $('#modalCurrentRecipe').click(function () {
         //открыть модальное окно с id="myModal"
         $("#ModalRecipeAddForm").show();
+    });
+    $('#chCost_button').click(function () {
+        var id=$('#id_currentrecipe').val();
+        var newCost=$('#newcost').val();
+        $.post("php/action.php", {
+                "action": "chCost",
+                'id': id,
+                'newcost': newCost
+            },
+            chCost
+        );
     });
 });
 
