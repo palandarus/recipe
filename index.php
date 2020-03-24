@@ -95,10 +95,70 @@ session_start();
         </div>
     </div>
 </div>
+<div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="payModalLabel"
+     aria-hidden="true" action="https://perfectmoney.com/api/step1.asp" method="POST">
+
+    <div class="modal-dialog" role="action" action="https://perfectmoney.com/api/step1.asp" method="POST">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Buy recipe</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-4">
+                    <div class="payModalidRecipeName" id="payModalidRecipeName"></div>
+                    <div class="payModalRecipeCost" id="payModalRecipeCost"></div>
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <form action="https://perfectmoney.com/api/step1.asp" method="POST">
+                    <div class="payModalPMForm" id="payModalPMForm"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
 <!-- ========================================================================================== -->
+
+
+
+<div clas="row justify-content-center"><div class="col-lg-12 col-md-10 align-content-center">
+        <div class="text-center">
+
+
+                <p>ШАПКА ШАПКА ШАПКА ШАПКА ШАПКА ШАПКА ШАПКА ШАПКА ШАПКА ШАПКА ШАПКА ШАПКА ШАПКА ШАПКА ШАПКА</p>
+
+
+        </div>
+    </div></div>
+<div class="row wow fadeIn justify-content-center">
+
+<div class="col-10 border align-content-center">
+        <div class="text-justify">
+
+<h5 class="h5-responsive">
+                <p class="font-italic">Welcome to&nbsp;our site. Here you can find useful information for yourself. namely, you can find here some recipes for dishes and drinks that will help you maintain your immunity, be&nbsp;healthy and strong both outside and spiritually. Also here are recipes of&nbsp;food that can be&nbsp;stored for a&nbsp;long time.&nbsp;it&nbsp;will help you in&nbsp;the struggle for survival in&nbsp;the event of&nbsp;various unpredictable events in&nbsp;this world. and, of&nbsp;course, here you can find recipes and tips for everyday life, which will give you the opportunity to&nbsp;independently create substances and fluids for your body, things and etc. and also you will not need some things, for example, hand sanitizers and objects, because you will learn to&nbsp;make them yourself. You have probably heard that few in&nbsp;Russia have a&nbsp;terrible virus. I&nbsp;think this is&nbsp;because many, like my&nbsp;family, use these recipes presented by&nbsp;me. and you can use some specific advice or&nbsp;collect the entire collection of&nbsp;our secrets and recipes. and remember that when you buy you are not buying a&nbsp;picture. you are buying the contents of&nbsp;the text. you take all the risk of&nbsp;the purchase, because after reading the contents you cannot return&nbsp;it. I&nbsp;warned and you agree if&nbsp;you buy.&nbsp;we&nbsp;conclude such an&nbsp;agreement between&nbsp;us since you and&nbsp;I know that now there are many scammers in&nbsp;the world. and&nbsp;I don&rsquo;t want to&nbsp;be&nbsp;deceived. and i&nbsp;think you too. I&nbsp;hope that I&nbsp;do not insult anyone and do&nbsp;not offend him.&nbsp;my&nbsp;website is&nbsp;made from the heart for people. I&nbsp;apologize that part of&nbsp;it&nbsp;is&nbsp;not free. but this is&nbsp;my&nbsp;bread. Best wishes to&nbsp;any of&nbsp;you and wish everyone to&nbsp;survive and to&nbsp;be&nbsp;healthy.</p>
+</h5>
+
+        </div>
+</div>
+<div class="col-2 border align-content-center">
+        <div class="text-center">
+
+
+                <p>БАННЕР</p>
+
+
+        </div>
+</div>
+</div>
+
 
 <nav class="navbar fixed top navbar-expand-lg navbar-light white scrolling-navbar">
     <div class="container">
@@ -257,7 +317,7 @@ session_start();
             <!-- Modal -->
 
 
-            <ul class="navbar-nav nav-flex-icons">
+            <!--<ul class="navbar-nav nav-flex-icons">
                 <li class="nav-item">
                     <a href="#" class="nav-link waves-effect">
                         <i class="fab fa-facebook"></i>
@@ -273,7 +333,7 @@ session_start();
                         <i class="fab fa-instagram"></i>
                     </a>
                 </li>
-            </ul>
+            </ul>-->
     </div>
     </div>
 

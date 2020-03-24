@@ -1,5 +1,6 @@
 <?php
 require_once 'dbconnect.php';
+mb_internal_encoding("UTF-8");
 
 $action = $_POST["action"];
 
@@ -31,8 +32,9 @@ function login($connect){
 
     if (mysqli_num_rows($result) > 0) {
         $username = $_POST['username'];
-        $roleId = (int)$result->fetch_row()[4];
-        $userId = (int)$result->fetch_row()[0];
+        $user=$result->fetch_row();
+        $roleId = $user[4];
+        $userId = $user[0];
         $_SESSION['username'] = $username;
         $_SESSION['role'] = $roleId;
         $_SESSION['id'] = $userId;
@@ -92,14 +94,40 @@ function logout(){
 
 function init($connect)
 {
-    $sqlquery = "SELECT * FROM `recipe` LEFT JOIN category ON recipe.category_id=category.id_category ORDER BY category.category_name, recipe.recipe_name";
+    $sqlquery = "SELECT * FROM `recipe` LEFT JOIN category ON recipe.category_id=category.id_category ORDER BY category.id_category, recipe.recipe_name";
     $result = mysqli_query($connect, $sqlquery);
     if (mysqli_num_rows($result) > 0) {
         $out = array();
         while ($row = mysqli_fetch_assoc($result)) {
             $out[$row["id"]] = $row;
         }
+//        $res=mb_detect_encoding($out);
         echo json_encode($out);
+        /*switch (json_last_error()) {
+            case JSON_ERROR_NONE:
+                echo ' - No errors';
+                break;
+            case JSON_ERROR_DEPTH:
+                echo ' - Maximum stack depth exceeded';
+                break;
+            case JSON_ERROR_STATE_MISMATCH:
+                echo ' - Underflow or the modes mismatch';
+                break;
+            case JSON_ERROR_CTRL_CHAR:
+                echo ' - Unexpected control character found';
+                break;
+            case JSON_ERROR_SYNTAX:
+                echo ' - Syntax error, malformed JSON';
+                break;
+            case JSON_ERROR_UTF8:
+                echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
+                break;
+            default:
+                echo ' - Unknown error';
+                break;
+        }
+
+        echo PHP_EOL;*/
     } else echo "0 results";
 }
 
