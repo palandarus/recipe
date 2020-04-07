@@ -1,5 +1,7 @@
 <?php
 $server_name="itcrown.ru";
+//$server_name="antivrecipes.com";
+//$server_name="127.0.0.1";
 $server_login="u0382881_recipes";
 $server_password="UzUs2MnBD8QGLIfM";
 $server_dbname="u0382881_recipes";

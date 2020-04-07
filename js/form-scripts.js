@@ -10,7 +10,7 @@ function getColumnRecipe(data) {
     var out = '';
     if (data.cost > 0) {
         out += '<div class="col-12 mb-3" onclick="showModalPayForm(' + data.name + ',' + data.cost + ',' + data.id + ',' + getCookie('cookieUserID') + ')">';
-        out += '<img class="card-img-top img-fluid" src="img/recipe_icons/lc/' + data.icon + '"alt="' + data.name + '">';
+        out += '<img class="card-img-top img-fluid" src="img/recipe_icons/lc/' + data.lcicon + '"alt="' + data.name + '">';
         out += '<div class="mask rgba-white-slight"></div>';
         out += '</a>';
         out += '</div>';
@@ -28,10 +28,10 @@ function getColumnRecipe(data) {
 }
 
 function showModalPayForm(name, cost, id, user_id) {
-    var outname ;
-    var outcost ;
+    var outname;
+    var outcost;
     var outpmform;
-    if(user_id != -1) {
+    if (user_id != -1) {
         outname = '<input type="text" name="id_currentrecipe" id="id_currentrecipe" hidden="true" value="' + name + '">';
         outcost = '<input type="text" name="newcost" id="newcost" value="' + cost + '">';
         outpmform = '<form action="https://perfectmoney.com/api/step1.asp" method="POST">\n' +
@@ -40,22 +40,27 @@ function showModalPayForm(name, cost, id, user_id) {
             '<input type="hidden" name="PAYMENT_ID" value="fromRecipesStore">\n' +
             '<input type="hidden" name="PAYMENT_AMOUNT" value="' + cost + '"><BR>\n' +
             '<input type="hidden" name="PAYMENT_UNITS" value="USD">\n' +
-            '<input type="hidden" name="STATUS_URL" value="http://itcrown.ru/development/recipes/php/pmevent.php">\n' +
-            '<input type="hidden" name="PAYMENT_URL" value="http://itcrown.ru/development/recipes/php/pmsuccess.php">\n' +
+            '<input type="hidden" name="STATUS_URL" value="http://antivrecipes.com/php/pmevent.php">\n' +
+            '<input type="hidden" name="PAYMENT_URL" value="http://antivrecipes.com/php/pmsuccess.php">\n' +
             '<input type="hidden" name="PAYMENT_URL_METHOD" value="LINK">\n' +
-            '<input type="hidden" name="NOPAYMENT_URL" value="http://itcrown.ru/development/recipes/index.php">\n' +
+            '<input type="hidden" name="NOPAYMENT_URL" value="http://antivrecipes.com/php/pmerror.php">\n' +
             '<input type="hidden" name="NOPAYMENT_URL_METHOD" value="LINK">\n' +
             '<input type="hidden" name="SUGGESTED_MEMO" value="">\n' +
             '<input type="hidden" name="RECIPE_ID" value=" ' + id + ' ">\n' +
             '<input type="hidden" name="USER_ID" value=" ' + user_id + ' ">\n' +
             '<input type="hidden" name="BAGGAGE_FIELDS" value="RECIPE_ID USER_ID">\n' +
             '<input type="submit" class="btn btn-default" name="PAYMENT_METHOD" value="Buy Recipe">\n' +
+            '</form>' +
+            '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">\n' +
+            '    <input type="hidden" name="cmd" value="_s-xclick">\n' +
+            '    <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">\n' +
+            '    <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">\n' +
+            '    <img alt="" border="0" src="https://www.paypalobjects.com/ru_RU/i/scr/pixel.gif" width="1" height="1">\n' +
             '</form>';
-    }
-    else{
-        outname='<h5><p>Current recipe is locked</p></h5>';
-        outcost='<h5><p>You should sing in to buy it</p></h5>';
-        outpmform='<button id="modalActivate" type="button" class="btn btn-danger" data-toggle="modal"\n' +
+    } else {
+        outname = '<h5><p>Current recipe is locked</p></h5>';
+        outcost = '<h5><p>You should buy this recipe to make it</p></h5>';
+        outpmform = '<button id="modalActivate" type="button" class="btn btn-danger" data-toggle="modal"\n' +
             '                            data-target="#ModalLoginForm">\n' +
             '                        Sign in/up\n' +
             '                    </button>';
@@ -70,7 +75,6 @@ function showModalPayForm(name, cost, id, user_id) {
 
 function show_recipes(data) {
     var goods = JSON.parse(data);
-    console.log(goods);
     var role = getCookie('cookieRole');
     var category = 0;
     var flag = 0;
@@ -216,7 +220,7 @@ function show_recipes(data) {
                 itemCount = 0;
             }
             itemCount++;
-            out += '<div class="col-4 col-md-3 col-lg-2 col-xl-1 mb-3" id="resres" onclick="open_recipe(' + goods[key].id + ',' + goods[key].cost + ')">';
+            out += '<div class="col-4 col-md-3 col-lg-2 col-xl-1 mb-3" id="resres" onclick="open_recipe(' + goods[key].id + ',' + goods[key].cost + ',' + goods[key].recipe_name + ')">';
             // out += '<div class="view overlay">';
             // out += '<a href="img/recipes/' + goods[key].image + '" data-lightbox="' + goods[key].recipe_name + '">';
             out += '<img class="card-img-top img-fluid" src="img/recipe_icons/' + goods[key].icon + '"alt="' + goods[key].name + '">';
@@ -260,11 +264,14 @@ function show_recipes(data) {
     $('.goods-out').html(out);
 }
 
-function open_recipe(id, cost) {
+function open_recipe(id, cost, name) {
 
     var outid = '<input type="text" name="id_currentrecipe" id="id_currentrecipe" hidden="true" value="' + id + '">';
+    var outname = '<input type="text" name="newname" id="newname" value="' + name + '">';
     var out = '<input type="text" name="newcost" id="newcost" value="' + cost + '">';
+
     $('.idRecipe').html(outid);
+    $('.recipe_name').html(outname);
     $('.costToChange').html(out);
     $("#myModal1").modal('show');
 
@@ -379,6 +386,15 @@ function chCost(data) {
         location.reload();
     }
 }
+function delRecipe(data) {
+    if (data == 'No') {
+        alert("Something going wrong");
+    } else {
+        $('#ModalRecipeAddForm').hide();
+        location.reload();
+    }
+}
+
 
 $("#loginForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
@@ -440,18 +456,44 @@ $(document).ready(function () {
 
         var action = "add_recipe";
         var name = $('#name').val();
-        // var icon = $('#icon').val();
-        // var image = $('#image').val();
+        var iconfile = $('#iconfile').prop('files')['0'];
+        var iconname = iconfile.name;
+        var imagefile = $('#imagefile').prop('files')['0'];
+        var imagename = imagefile.name;
         var cost = $('#cost').val();
-        var image = "recipe1.png";
-        var icon = "icon1.png";
-        if (name != '' && image != '') {
-            $.ajax({
+        var category_id=$('#category_selected option:selected').val();
+        var formData = new FormData();
+        if (name != '' && imagefile != null && iconfile != null) {
+
+            formData.append('name', name);
+            formData.append('iconfile', iconfile);
+            formData.append('imagefile', imagefile);
+            formData.append('cost', cost);
+            formData.append('action', action);
+            formData.append('iconname', iconname);
+            formData.append('imagename', imagename);
+            formData.append('category_id', category_id);
+
+
+            fetch('php/action.php', {
+
+                    method: 'POST',
+                    body: formData,
+                }
+            ).then(response => {
+                $('#ModalRecipeAddForm').hide();
+                location.reload();
+            })
+
+            /*$.ajax({
                 url: "php/action.php",
+
                 method: "POST",
-                data: {name: name, icon: icon, image: image, cost: cost, action: action},
+                data: {name: name, iconfile: iconfile, imagefile: imagefile, cost: cost, action: action, iconname:iconname,imagename:imagename},
+                contentType: false,
+                processData: false,
                 success: function (data) {
-                    //alert(data);
+                    alert(data);
                     if (data == 'No') {
                         alert("something went wrong");
                     } else {
@@ -459,26 +501,39 @@ $(document).ready(function () {
                         location.reload();
                     }
                 }
-            });
+                    });*/
         } else {
             alert("Empty fields found!!!");
         }
-    });
-    // $('.inputGroupFile01').file_upload();
+    })
+    ;
+// $('.inputGroupFile01').file_upload();
     $('#modalCurrentRecipe').click(function () {
         //открыть модальное окно с id="myModal"
         $("#ModalRecipeAddForm").show();
     });
     $('#chCost_button').click(function () {
         var id = $('#id_currentrecipe').val();
+        var name=$('#newname').val();
         var newCost = $('#newcost').val();
         $.post("php/action.php", {
                 "action": "chCost",
                 'id': id,
+                'name' : name,
                 'newcost': newCost
             },
             chCost
         );
     });
-});
+    $('#delRecipe_button').click(function () {
+        var id = $('#id_currentrecipe').val();
+        $.post("php/action.php", {
+                "action": "delRecipe",
+                'id': id
+            },
+            delRecipe()
+        );
+    });
+})
+;
 

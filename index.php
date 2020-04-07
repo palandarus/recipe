@@ -19,6 +19,7 @@ session_start();
 <script type="text/javascript" src="js/form-scripts.js"></script>
 <!-- Your custom scripts (optional) -->
 <script type="text/javascript" src="js/lightbox.js"></script>
+
 <link href="css/lightbox.css" rel="stylesheet"/>
 
 <html lang="en">
@@ -85,12 +86,14 @@ session_start();
             <div class="modal-body mx-3">
                 <div class="md-form mb-4">
                     <div class="idRecipe" id="idRecipe"></div>
+                    <div class="recipe_name" id="recipe_name"></div>
                     <div class="costToChange" id="costToChange"></div>
                 </div>
 
             </div>
             <div class="modal-footer d-flex justify-content-center">
                 <button id="chCost_button" class="btn btn-default">Change</button>
+                <button id="delRecipe_button" class="btn btn-default">Delete recipe</button>
             </div>
         </div>
     </div>
@@ -114,9 +117,12 @@ session_start();
 
             </div>
             <div class="modal-footer d-flex justify-content-center">
+
                 <form action="https://perfectmoney.com/api/step1.asp" method="POST">
+
                     <div class="payModalPMForm" id="payModalPMForm"></div>
                 </form>
+
             </div>
         </div>
     </div>
@@ -275,24 +281,45 @@ session_start();
                                             <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
                                         </div>
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="inputGroupFile01"
-                                                   aria-describedby="inputGroupFileAddon01">
-                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                            <input type="file" class="custom-file-input" id="iconfile"
+                                                   aria-describedby="iconfile">
+                                            <label class="custom-file-label" for="iconfilelabel">Choose file</label>
                                         </div>
                                     </div>
                                     <br/>
+                                    <label>Lock icon</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupFileAddon03">Upload</span>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="lciconfile"
+                                                   aria-describedby="lciconfile">
+                                            <label class="custom-file-label" for="lciconfilelabel">Choose file</label>
+                                        </div>
+                                    </div>
+                                    <br>
                                     <label>Image</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
                                         </div>
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="inputGroupFile02"
-                                                   aria-describedby="inputGroupFileAddon02">
-                                            <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                            <input type="file" class="custom-file-input" id="imagefile"
+                                                   aria-describedby="imagefile">
+                                            <label class="custom-file-label" for="imagefilelabel">Choose file</label>
                                         </div>
                                     </div>
+
                                     <br/>
+                                    <label>Category</label>
+                                    <select class="browser-default custom-select" id="category_selected" name="category_selected">
+                                        <option value="5" selected="selected" >First dishes</option>
+                                        <option value="6">Meal of long-term storage</option>
+                                        <option value="7">Beverage with your own handes</option>
+                                        <option value="8">Useful medical, survival and home tips and recipes</option>
+                                    </select>
+
                                     <label>Cost</label>
                                     <input type="number" name="cost" id="cost" class="form-control"
                                            placeholder="Enter Cost"
